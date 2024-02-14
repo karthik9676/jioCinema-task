@@ -1,0 +1,45 @@
+GET http://localhost:4444/auth
+
+###
+POST http://localhost:4444/auth/signup
+Content-Type: application/json
+
+{
+    "name":"rohit",
+    "email":"rohit@gmail.com",
+    "phoneNumber":"9090909090",
+    "password":"rohit@123"
+}
+
+###
+POST http://localhost:4444/auth/login
+Content-Type: application/json
+
+{
+    "email":"rohit@gmail.com",
+    "password":"rohit@123"
+}
+
+###
+GET http://localhost:4444/auth/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjYzZDYzYmYxOTMwNTY4MDliY2JjNyIsImlhdCI6MTY5NzAwNTMwMCwiZXhwIjoxNjk3MDEyNTAwfQ.sdtjfKHMr1o3UmDxw3RknL6nBJacjj1_wOYb7AkjZls
+
+###
+GET http://localhost:4444/api/movies
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjYzZDYzYmYxOTMwNTY4MDliY2JjNyIsImlhdCI6MTY5NzA3NzU1MCwiZXhwIjoxNjk3MDg0NzUwfQ.DDk1XD_K7zMluF-SBVATeyvV0yEMoEOVVC9B-igwlxk
+
+###
+GET http://localhost:4444/api/movies/6526553926e77d7d65fd2c36
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjYzZDYzYmYxOTMwNTY4MDliY2JjNyIsImlhdCI6MTY5NzE3NjMwNiwiZXhwIjoxNjk3MTgzNTA2fQ.2oEVUvK1tnXCJT6KKa1ZnX-14AR4Kkwa_O0W98ryXJY
+
+###
+GET http://localhost:4444/api/filtermovies?search=pihu&genre=drama&language=hindi
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjYzZDYzYmYxOTMwNTY4MDliY2JjNyIsImlhdCI6MTY5NzA3NzU1MCwiZXhwIjoxNjk3MDg0NzUwfQ.DDk1XD_K7zMluF-SBVATeyvV0yEMoEOVVC9B-igwlxk
+
+
+###
+GET http://localhost:4444/api/shows
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjYzZDYzYmYxOTMwNTY4MDliY2JjNyIsImlhdCI6MTY5NzM3MjE1OSwiZXhwIjoxNjk3Mzc5MzU5fQ.UAKVoccZU4w8cZ5O3hJV5bYFcVzPMLC21FKjX0xY8e4
+###
+GET http://localhost:4444/api/shows/652a2adca962ce699205d762
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjYzZDYzYmYxOTMwNTY4MDliY2JjNyIsImlhdCI6MTY5NzI3MzQxMSwiZXhwIjoxNjk3MjgwNjExfQ.D57DsyTs6pRZcB_Yfxjwa-S5VkiXM1MMv-AusgBeymg
